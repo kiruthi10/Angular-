@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>The Server Component</h2>
+<h4>The Server component</h4>
 
-    <!-- {{'Server'}} ==> act as a string -- o/p Server
-    status and time dyanimically bind data from the code string interpolation -->
-
-    <p>{{'Server'}} status is {{status}}</p>
-    <p>Server Id is {{serverId}}</p>
-    <p>Server status method {{getstatus()}}</p>
-</body>
-</html>
+<p>Assignment solution</p>
+<label>Username</label>
+<input type="text" class="form-contact" [(ngModel)]="username">
+<span>{{username}}</span>
+<br/>
+<button class="btn btn-primary" 
+[disabled]="username === ''"
+(click)="username = ''">Reset username</button>

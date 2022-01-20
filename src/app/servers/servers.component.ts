@@ -6,6 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
+  // references to the property 
+  status: string = 'online';
+  serverId: number = 15;
+  serverName ='';
+
+  getstatus(){
+      return this.status;
+  }
+
   allowNewServer = false;
 
   constructor() {
@@ -15,6 +24,11 @@ export class ServersComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+
+  onUpdateServerName(event: any){
+    this.serverName = (<HTMLInputElement>event.target).value;
+    console.log(event);
   }
 
 }

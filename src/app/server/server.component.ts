@@ -6,12 +6,5 @@ import { Component } from "@angular/core";
 })
 
 export class ServerComponent {
-
-    // references to the property 
-    status: string = 'online';
-    serverId: number = 15;
-
-    getstatus(){
-        return this.status;
-    }
+    username='';
 }

@@ -1,11 +1,30 @@
+<h4>Ther Servers component</h4>
+
+<!-- Event binding -->
+<label>Server Name</label>
+<input type="text" class= "form-contact" (input)= "onUpdateServerName($event)">
+<span>{{serverName}}</span>
+
+
+<!-- string interpolation -->
+<p>{{'Server'}} status is {{status}} and Server Id is {{serverId}}</p>
+<p>Server status using method{{getstatus()}}</p>
+
+
+<!-- property binding for operations and functions-->
 <p>this page is that route to server component at the end.</p>
 <button class="btn btn-primary" [disabled]="!allowNewServer"> Add Sever </button>
-
-<!-- property binding for text -->
+<!-- property binding for displaying data-->
 <p [innerText]="allowNewServer"></p>
-
 <!-- string interpolation binding for text -->
-<p>{{allowNewServer}}</p>
+<!-- <p>{{allowNewServer}}</p> -->
 
-<!-- calling sever component -->
+
+<!-- two way data binding -->
+<label>Server Id</label>
+<input type="number" class="form-conatct" [(ngModel)]='serverId'/>
+<span>{{serverId}}</span>
+
+<hr/>
+<!-- calling server component from servers component-->
 <app-server></app-server>
