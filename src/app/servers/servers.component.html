@@ -1,2 +1,11 @@
-<p>this page is that route to server component </p>
+<p>this page is that route to server component at the end.</p>
+<button class="btn btn-primary" [disabled]="!allowNewServer"> Add Sever </button>
+
+<!-- property binding for text -->
+<p [innerText]="allowNewServer"></p>
+
+<!-- string interpolation binding for text -->
+<p>{{allowNewServer}}</p>
+
+<!-- calling sever component -->
 <app-server></app-server>
