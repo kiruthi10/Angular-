@@ -8,3 +8,9 @@
 <button class="btn btn-primary" 
 [disabled]="username === ''"
 (click)="username = ''">Reset username</button>
+<br/>
+<!----------------------------------directive------------------------------->
+<!-----ngIf---toggling through the click event --- true it wil not show p if false it will show the display---->
+<button class="btn btn-primary" (click)= "onToggleDisplay()">Display Details</button> 
+<p *ngIf="showDisplay">showing the details</p>
+<div *ngFor="let logItem of log" [ngStyle]="{backgroundColor: logItem >=5 ? 'blue' : 'transparent'}">{{logItem}}</div>
