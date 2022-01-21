@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   // references to the property 
   status: string = 'online';
-  serverId: number = 15;
-  serverName ='';
+  serverId: number =Math.floor(Math.random() * 11);
+  serverName =['Test Server'];
+  serverCreated= false;
+  
 
   getstatus(){
       return this.status;
@@ -26,9 +28,16 @@ export class ServersComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onServerCreate(){
+    this.serverCreated = true;
+  }
+
   onUpdateServerName(event: any){
-    this.serverName = (<HTMLInputElement>event.target).value;
+    this.serverName.push((<HTMLInputElement>event.target).value);
     console.log(event);
   }
 
+  getColor(){
+    return this.serverId >= 5 ? 'green' : 'red';
+  }
 }
